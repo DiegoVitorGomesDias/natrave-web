@@ -1,6 +1,6 @@
 import { Buttons } from "~/components/buttons.jsx"
 import { Header } from "~/components/header.jsx"
-import imgHome from "~/public/assets/imagens/img_home.png"
+import imgHome from "/assets/imagens/img_home.png"
 
 export const Home = () =>
 {
