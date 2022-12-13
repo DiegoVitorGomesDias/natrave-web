@@ -1,7 +1,7 @@
 import { Icons } from "~/components/icons.jsx"
 import { Header } from "~/components/header.jsx"
 import { Games } from "~/components/games.jsx"
-import { DateSelect } from "~/components/dateSelect"
+import { DateSelect } from "~/components/dateselect"
 
 import { useState, useEffect } from "react"  
 import { useAsyncFn } from "react-use"
