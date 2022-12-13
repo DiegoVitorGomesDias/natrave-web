@@ -1,7 +1,8 @@
+import './index.css'
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Router } from './pages'
-import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -20,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           const firstLoad = sessionStorage.getItem("firstLoad");
           if ( !firstLoad ) sessionStorage.setItem("firstLoad", true);
           
-          if (!authToken && ( pagesPrivy.includes(pathName) )) window.location.pathname = "/";
+          if ( !authToken && ( pagesPrivy.includes(pathName) ) ) window.location.pathname = "/";
           if ( !firstLoad && !(!authToken) ) window.location.pathname = "/dashboard";
         })
       }

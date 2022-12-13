@@ -4,11 +4,6 @@ import imgHome from "/assets/imagens/img_home.png"
 
 export const Home = () =>
 {
-
-  const localStorageToken = localStorage.getItem("token");
-
-  if (localStorageToken) window.location.pathname = "/dashboard";
-
   return (
     <div className=
     "p-6 min-h-screen bg-red-700 flex flex-col items-center content-center lg:justify-center lg:pb-24">

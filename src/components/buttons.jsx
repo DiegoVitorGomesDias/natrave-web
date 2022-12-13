@@ -1,7 +1,7 @@
 export const Buttons = ({ type, link, children, disabled = false }) =>
 {
   const classButtonSchema = 
-  "rounded-xl w-full font-bold px-8 py-4 text-base text-center cursor-pointer transition-colors ease-in-out duration-300 ";
+  "rounded-xl w-full font-bold px-8 py-4 text-base text-center cursor-pointer transition-colors ease-in-out duration-300 focus:outline-5 focus:outline-red-700 ";
 
   const classButton = 
   {
@@ -13,7 +13,7 @@ export const Buttons = ({ type, link, children, disabled = false }) =>
   if (type.tag === "submit") return (
     <input type="submit" 
       value={children} 
-      className={(classButton[type.style] ?? classButtonSchema) + (disabled && " opacity-80 cursor-default") } 
+      className={(classButton[type.style] ?? classButtonSchema) + " " + (disabled && "opacity-80 cursor-default") } 
       disabled={disabled}
     />
   )

@@ -16,8 +16,8 @@ export const Login = () =>
     const [ loading, setLoading ] = React.useState(false);
     const validationSchema = yup.object().shape
     ({
-        email: yup.string().required("Insira um e-mail.").email("Insira um e-mail válido"),
-        password: yup.string().required("Insira uma senha.")   
+        email: yup.string().required("Insira um e-mail.").email("Insira um e-mail válido."),
+        password: yup.string().required("Insira uma senha.").min(8, "A senha deve ter pelo menos oito caracteres.")
     })
 
     const formik = useFormik
@@ -130,10 +130,10 @@ export const Cadastro = () =>
 
     const validationSchema = yup.object().shape
     ({
-        name: yup.string().required("Insira um nome."),
-        username: yup.string().required("Insira um nome de usuário."),
-        email: yup.string().required("Insira um e-mail.").email("Insira um e-mail válido"),
-        password: yup.string().required("Insira uma senha.")   
+        name: yup.string().trim().required("Insira um nome."),
+        username: yup.string().trim().required("Insira um nome de usuário.").lowercase().matches("^(?=.{2,30}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$", "Só é permitido letras, números, underline e ponto."),
+        email: yup.string().trim().required("Insira um e-mail.").email("Insira um e-mail válido"),
+        password: yup.string().trim().required("Insira uma senha.").min(8, "A senha deve ter pelo menos oito caracteres.")
     })
 
     const formik = useFormik
@@ -181,6 +181,7 @@ export const Cadastro = () =>
             email: "",
             password: ""       
         },
+
         validationSchema
     })
 

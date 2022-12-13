@@ -22,14 +22,10 @@ export const Dashboard = () =>
       url: "/games",
       params
     })
-
     return dataGames.data
   }); 
 
-  useEffect(() =>
-  {
-    setGameByDate({ gameTime: currentDate });
-  }, [currentDate]);
+  useEffect(() => {setGameByDate({ gameTime: currentDate })}, [currentDate]);
 
   const [ hunches, setHunches ] = useAsyncFn( async (auth) =>
   {

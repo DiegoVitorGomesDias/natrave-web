@@ -1,5 +1,4 @@
 import "~/components/games.css";
-// import imagesOfFlags from "~/public/assets/flags";
 
 import axios from "axios";
 import { useFormik } from "formik";
@@ -7,6 +6,7 @@ import * as yup from "yup";
 
 export const Games = ( {game} ) =>
 {
+    const auth = JSON.parse(localStorage.getItem("auth"));
     let { hour, teamOne, teamTwo, gameId } = game;
     
     teamOne.slug = teamOne.slug ? teamOne.slug.toString().toLowerCase() : "-";
@@ -22,10 +22,10 @@ export const Games = ( {game} ) =>
     ({
         onSubmit: async (values) => 
         {
+            if (window.location.pathname !== ("/" + auth.user.username)) return
+
             values.homeTeamScore = values.homeTeamScore ||  0;
             values.awayTeamScore = values.awayTeamScore || 0;
-
-            console.log({ ...values, gameId });
 
             const res = await axios
             ({
@@ -34,7 +34,7 @@ export const Games = ( {game} ) =>
                 url: "/hunches",
                 headers:
                 {
-                    authorization: "Bearer " + JSON.parse(localStorage.getItem("auth")).accessToken
+                    authorization: "Bearer " + auth.accessToken
                 },
                 data: { ...values, gameId }
             })
@@ -46,8 +46,6 @@ export const Games = ( {game} ) =>
         },
         validationSchema
     })
-
-    // console.log(imagesOfFlags);
 
     return (
         <div className="flex flex-col items-center justify-center border-2 border-gray-300 gap-4 rounded-2xl p-12 py-6">
@@ -85,7 +83,7 @@ export const Games = ( {game} ) =>
                         text-center placeholder-red-700 text-red-700"
                     />
                     <img src={`/assets/flags/${teamTwo.slug}.png`} alt={teamTwo.slug} className="inline-block"/>
-                    <label htmlFor={teamTwo.slug} className="inline-block text-gray-500">{teamTwo?.slug}</label>
+                    <label htmlFor={teamTwo.slug} className="inline-block text-gray-500 uppercase">{teamTwo?.slug}</label>
                 </span>
 
             </form>

@@ -2,12 +2,11 @@ import { Header } from "~/components/header.jsx"
 import { Games } from "~/components/games.jsx"
 import { DateSelect } from "~/components/dateselect.jsx"
 import { Icons } from "~/components/icons.jsx"
-import { useState } from "react"
+
+import { useState, useEffect } from "react"
 import { format, formatISO } from "date-fns"
 import { useAsyncFn } from "react-use"
-import { useEffect } from "react"
 import axios from "axios"
-
 
 export const Profile = () =>
 {
@@ -94,7 +93,7 @@ export const Profile = () =>
 
         <div className="flex flex-col items-center w-full bg-red-700 p-6 gap-4">
           <section className="flex items-center gap-4 w-full max-w-5xl p-6">
-            <span className="mt-2" ><Icons icon={"Back"} fill={"white"} link={"/dashboard"} /></span>
+            <span className="mt-2 h-9 w-8" ><Icons icon={"Back"} fill={"white"} link={"/dashboard"} /></span>
             <h1 className="font-bold text-2xl"
             >{!user.error && !user.loading && user?.value?.name}</h1>
           </section>
@@ -107,7 +106,7 @@ export const Profile = () =>
       <DateSelect currentDate={currentDate} onChange={setCurrentDate} />
 
         <section className="flex flex-col p-12 gap-6 flex-1 text-red-700">
-        { isLoading && "Carregando..." }
+          { isLoading && "Carregando..." }
           { hasError && "Erro Inesperado" }
           { validateGamesHunches && gameByDate.value?.map( (gameCard, index) => 
             {
@@ -115,8 +114,8 @@ export const Profile = () =>
                 <Games key={index} game={
                   {
                     "hour": format(new Date(gameCard.gameTime), "HH:mm"), 
-                    "teamOne": { "slug": gameCard.homeTeam, "score": hunches?.value?.[gameCard.id]?.homeTeamScore || "" }, 
-                    "teamTwo": { "slug": gameCard.awayTeam, "score": hunches?.value?.[gameCard.id]?.awayTeamScore || "" },
+                    "teamOne": { "slug": gameCard.homeTeam, "score": hunches?.value?.[gameCard.id]?.homeTeamScore }, 
+                    "teamTwo": { "slug": gameCard.awayTeam, "score": hunches?.value?.[gameCard.id]?.awayTeamScore },
                     "gameId": gameCard.id,
                   }}
                 />

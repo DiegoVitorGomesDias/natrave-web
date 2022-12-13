@@ -11,11 +11,11 @@ export const DateSelect = ({ currentDate, onChange }) =>
 
     return (
         <nav className="flex gap-6">
-            <button className="appearance-none" onClick={prevDay}><Icons icon="ArrowLeft" fill={"red-500"} /></button>
+            <button onClick={prevDay}><Icons icon="ArrowLeft" fill={"red-500"} /></button>
             <time className="text-red-700 font-bold">
                 { format(date, "dd 'de' MMMM", {locale: ptBR}) }
             </time>
-            <button className="appearance-none" onClick={nextDay}><Icons icon="ArrowRight" fill={"red-500"} /></button>
+            <button onClick={nextDay}><Icons icon="ArrowRight" fill={"red-500"} /></button>
         </nav>
     )
 }
