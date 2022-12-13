@@ -1,6 +1,6 @@
-import logo_fundo_branco from "~/public/assets/logo/logo-fundo-branco.svg";
-import logo_fundo_vinho from "~/public/assets/logo/logo-fundo-vinho.svg";
-import logo_fundo_vermelho from "~/public/assets/logo/logo-fundo-vermelho.svg";
+import logo_fundo_branco from "/assets/logo/logo-fundo-branco.svg";
+import logo_fundo_vinho from "/assets/logo/logo-fundo-vinho.svg";
+import logo_fundo_vermelho from "/assets/logo/logo-fundo-vermelho.svg";
 
 export const Header = ({ version }) =>
 {

@@ -9,8 +9,8 @@ export const Games = ( {game} ) =>
 {
     let { hour, teamOne, teamTwo, gameId } = game;
     
-    teamOne.slug = teamOne.slug ? teamOne.slug.toString().toUpperCase() : "-";
-    teamTwo.slug = teamTwo.slug ? teamTwo.slug.toString().toUpperCase() : "-";
+    teamOne.slug = teamOne.slug ? teamOne.slug.toString().toLowerCase() : "-";
+    teamTwo.slug = teamTwo.slug ? teamTwo.slug.toString().toLowerCase () : "-";
 
     const validationSchema = yup.object().shape
     ({
@@ -56,8 +56,8 @@ export const Games = ( {game} ) =>
             <form className="flex gap-6 items-center justify-center">
 
                 <span className="flex items-center justify-center gap-4">
-                    <label htmlFor={teamOne.slug} className="inline-block text-gray-500">{teamOne.slug}</label>
-                    <img src={`src/public/assets/flags/${teamOne.slug}.png`} alt={teamOne.slug} className="inline-block"/>
+                    <label htmlFor={teamOne.slug} className="inline-block text-gray-500 uppercase">{teamOne.slug}</label>
+                    <img src={`/assets/flags/${teamOne.slug}.png`} alt={teamOne.slug} className="inline-block"/>
 
                     <input 
                         type="number" name="homeTeamScore" 
@@ -84,7 +84,7 @@ export const Games = ( {game} ) =>
                         bg-red-300/30 outline-red-500/50 outline-1
                         text-center placeholder-red-700 text-red-700"
                     />
-                    <img src={`src/public/assets/flags/${teamTwo.slug}.png`} alt={teamTwo.slug} className="inline-block"/>
+                    <img src={`/assets/flags/${teamTwo.slug}.png`} alt={teamTwo.slug} className="inline-block"/>
                     <label htmlFor={teamTwo.slug} className="inline-block text-gray-500">{teamTwo?.slug}</label>
                 </span>
 
