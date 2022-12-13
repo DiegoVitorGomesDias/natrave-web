@@ -82,7 +82,7 @@ export const Profile = () =>
 
   return (
     <div className=
-    "min-h-screen flex flex-col bg-white items-center content-center lg:justify-center">
+    "min-h-screen flex flex-col bg-white items-center content-center lg:justify-center pb-16">
 
       <header className="flex flex-col h-full w-full bg-red-500 items-center justify-center">
 
@@ -94,7 +94,7 @@ export const Profile = () =>
         <div className="flex flex-col items-center w-full bg-red-700 p-6 gap-4">
           <section className="flex items-center gap-4 w-full max-w-5xl p-6">
             <span className="mt-2 h-9 w-8" ><Icons icon={"Back"} fill={"white"} link={"/dashboard"} /></span>
-            <h1 className="font-bold text-2xl"
+            <h1 className="font-bold text-lg md:text-2xl"
             >{!user.error && !user.loading && user?.value?.name}</h1>
           </section>
         </div>
@@ -105,7 +105,7 @@ export const Profile = () =>
       
       <DateSelect currentDate={currentDate} onChange={setCurrentDate} />
 
-        <section className="flex flex-col p-12 gap-6 flex-1 text-red-700">
+        <section className="flex flex-col py-4 gap-6 flex-1 text-red-700 md:p-8 lg:p-12">
           { isLoading && "Carregando..." }
           { hasError && "Erro Inesperado" }
           { validateGamesHunches && gameByDate.value?.map( (gameCard, index) => 

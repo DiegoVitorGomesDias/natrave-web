@@ -17,7 +17,7 @@ export const Home = () =>
         </div>
 
         <div className="w-5/6 md:w-4/6 lg:w-2/6">
-          <h1 className="text-2xl text-center font-bold mb-4 lg:text-3xl lg:text-left"
+          <h1 className="text-xl text-center font-bold mb-4 md:text-2xl lg:text-3xl lg:text-left "
           >Dê o seu palpite na Copa do Mundo do Catar de 2022!</h1>
 
           <div className="flex flex-col w-full justify-center items-center gap-y-2 lg:w-full">

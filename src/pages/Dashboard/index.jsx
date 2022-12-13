@@ -56,7 +56,7 @@ export const Dashboard = () =>
 
   return (
     <div className=
-    "min-h-screen flex flex-col bg-white items-center content-center lg:justify-center">
+    "min-h-screen flex flex-col bg-white items-center content-center lg:justify-center pb-16">
 
       <header className="flex flex-col h-full w-full bg-red-500 items-center justify-center">
 
@@ -79,7 +79,7 @@ export const Dashboard = () =>
         
         <DateSelect currentDate={currentDate} onChange={setCurrentDate} />
 
-        <section className="flex flex-col p-12 gap-6 flex-1 text-red-700">
+        <section className="flex flex-col py-4 gap-6 flex-1 text-red-700 md:p-8 lg:p-12">
 
           { isLoading && "Carregando..." }
           { hasError && "Erro Inesperado" }

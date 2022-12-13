@@ -63,9 +63,9 @@ export const Login = () =>
 
     return (
         <div className=
-        "p-6 min-h-screen bg-red-700 flex flex-col justify-center items-center lg:justify-center">
+        "p-0 min-h-screen bg-red-700 flex flex-col justify-center items-center lg:p-6 lg:justify-center">
 
-            <div className="bg-white h-auto w-5/6 rounded md:w-2/6 ">
+            <div className="bg-white h-auto w-5/6 rounded md:w-3/6 lg:w-2/6 ">
 
                 <div className="w-full border-b-2 border-red-700 p-6 ">
                     <Header version={"bg-white"} />
@@ -187,9 +187,9 @@ export const Cadastro = () =>
 
     return (
         <div className=
-        "p-6 min-h-screen bg-red-700 flex flex-col justify-center items-center lg:justify-center">
+        "p-0 min-h-screen bg-red-700 flex flex-col justify-center items-center lg:p-6 lg:justify-center">
 
-            <div className="bg-white h-auto w-5/6 rounded md:w-2/6 ">
+            <div className="bg-white h-auto w-5/6 rounded md:w-3/6 lg:w-2/6 ">
 
                 <div className="w-full border-b-2 border-red-700 p-6 ">
                     <Header version={"bg-white"} />
