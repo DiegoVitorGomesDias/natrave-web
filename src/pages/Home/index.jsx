@@ -1,5 +1,6 @@
 import { Buttons } from "~/components/buttons.jsx"
 import { Header } from "~/components/header.jsx"
+import imgHome from "~/public/assets/imagens/img_home.png"
 
 export const Home = () =>
 {
@@ -17,7 +18,7 @@ export const Home = () =>
       <main className="h-5/6 flex flex-col pt-16 items-center justify-center gap-y-8 lg:flex-row lg:gap-x-16">
 
         <div className="w-3/5 md:w-2/6">
-          <img src="src/public/assets/imagens/img.png" alt="" />
+          <img src={imgHome} alt="" />
         </div>
 
         <div className="w-5/6 md:w-4/6 lg:w-2/6">

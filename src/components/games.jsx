@@ -1,4 +1,5 @@
-import "~/components/games.css"
+import "~/components/games.css";
+// import imagesOfFlags from "~/public/assets/flags";
 
 import axios from "axios";
 import { useFormik } from "formik";
@@ -7,7 +8,7 @@ import * as yup from "yup";
 export const Games = ( {game} ) =>
 {
     let { hour, teamOne, teamTwo, gameId } = game;
-
+    
     teamOne.slug = teamOne.slug ? teamOne.slug.toString().toUpperCase() : "-";
     teamTwo.slug = teamTwo.slug ? teamTwo.slug.toString().toUpperCase() : "-";
 
@@ -46,6 +47,8 @@ export const Games = ( {game} ) =>
         validationSchema
     })
 
+    // console.log(imagesOfFlags);
+
     return (
         <div className="flex flex-col items-center justify-center border-2 border-gray-300 gap-4 rounded-2xl p-12 py-6">
             <time className="text-gray-700 font-semibold">{hour}</time>
@@ -54,7 +57,7 @@ export const Games = ( {game} ) =>
 
                 <span className="flex items-center justify-center gap-4">
                     <label htmlFor={teamOne.slug} className="inline-block text-gray-500">{teamOne.slug}</label>
-                    <img src={`src/public/assets/bandeiras/${teamOne.slug}.png`} alt={teamOne.slug} className="inline-block"/>
+                    <img src={`src/public/assets/flags/${teamOne.slug}.png`} alt={teamOne.slug} className="inline-block"/>
 
                     <input 
                         type="number" name="homeTeamScore" 
@@ -81,7 +84,7 @@ export const Games = ( {game} ) =>
                         bg-red-300/30 outline-red-500/50 outline-1
                         text-center placeholder-red-700 text-red-700"
                     />
-                    <img src={`src/public/assets/bandeiras/${teamTwo.slug}.png`} alt={teamTwo.slug} className="inline-block"/>
+                    <img src={`src/public/assets/flags/${teamTwo.slug}.png`} alt={teamTwo.slug} className="inline-block"/>
                     <label htmlFor={teamTwo.slug} className="inline-block text-gray-500">{teamTwo?.slug}</label>
                 </span>
 
