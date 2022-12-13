@@ -1,9 +1,9 @@
 import { ReactSVG } from 'react-svg'
 
-import ArrowLeft from "../assets/icones/arrow-left.svg"
-import ArrowRight from "../assets/icones/arrow-right.svg"
-import Back from "../assets/icones/back.svg"
-import Profile from "../assets/icones/profile.svg"
+import ArrowLeft from "~/public/assets/icones/arrow-left.svg"
+import ArrowRight from "~/public/assets/icones/arrow-right.svg"
+import Back from "~/public/assets/icones/back.svg"
+import Profile from "~/public/assets/icones/profile.svg"
 
 const icons = { ArrowLeft, ArrowRight, Back, Profile };
 

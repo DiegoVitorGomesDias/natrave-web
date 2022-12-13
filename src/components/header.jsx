@@ -1,6 +1,6 @@
 export const Header = ({ version }) =>
 {
-    let srcLogo = "/src/assets/logo/";
+    let srcLogo = "src/public/assets/logo/";
 
     if (version === "bg-white") srcLogo += "logo-fundo-branco.svg";
 

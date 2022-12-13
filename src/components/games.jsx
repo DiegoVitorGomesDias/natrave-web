@@ -54,7 +54,7 @@ export const Games = ( {game} ) =>
 
                 <span className="flex items-center justify-center gap-4">
                     <label htmlFor={teamOne.slug} className="inline-block text-gray-500">{teamOne.slug}</label>
-                    <img src={`src/assets/bandeiras/${teamOne.slug}.png`} alt={teamOne.slug} className="inline-block"/>
+                    <img src={`src/public/assets/bandeiras/${teamOne.slug}.png`} alt={teamOne.slug} className="inline-block"/>
 
                     <input 
                         type="number" name="homeTeamScore" 
@@ -81,7 +81,7 @@ export const Games = ( {game} ) =>
                         bg-red-300/30 outline-red-500/50 outline-1
                         text-center placeholder-red-700 text-red-700"
                     />
-                    <img src={`src/assets/bandeiras/${teamTwo.slug}.png`} alt={teamTwo.slug} className="inline-block"/>
+                    <img src={`src/public/assets/bandeiras/${teamTwo.slug}.png`} alt={teamTwo.slug} className="inline-block"/>
                     <label htmlFor={teamTwo.slug} className="inline-block text-gray-500">{teamTwo?.slug}</label>
                 </span>
 
