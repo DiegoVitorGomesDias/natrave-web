@@ -4,7 +4,7 @@ Projeto desenvolvido para estudo durante o evento Full Stack Challenge da [Codar
 
 ## Sobre 
 
-O projeto consiste em uma aplicação compartilhamento de palpites dos jogos da Copa do Mundo de 2022.
+O projeto consiste em uma aplicação de compartilhamento de palpites dos jogos da Copa do Mundo de 2022.
 
 **Storytelling**: 
 Home [(/)](https://natrave-eta.vercel.app/) => 
