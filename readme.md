@@ -1,3 +1,3 @@
 ### NaTrave API
 
-Projeto desenvolvido no evendo Full Stack Challenge da Codar.me
+Projeto desenvolvido no evento Full Stack Challenge da Codar.me
