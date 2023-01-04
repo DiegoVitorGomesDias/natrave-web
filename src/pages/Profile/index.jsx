@@ -95,7 +95,7 @@ export const Profile = () =>
           <section className="flex items-center gap-4 w-full max-w-5xl p-6">
             <span className="mt-2 h-9 w-8" ><Icons icon={"Back"} fill={"white"} link={"/dashboard"} /></span>
             <h1 className="font-bold text-lg md:text-2xl"
-            >{!user.error && !user.loading && user?.value?.name}</h1>
+            >{(!user.error && !user.loading && user.value?.name) || username.toLocaleUpperCase()}</h1>
           </section>
         </div>
 
